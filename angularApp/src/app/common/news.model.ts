@@ -5,5 +5,6 @@ export class News{
   date : string;
   url: string;
   content: string;
-  score: number
+  score: number;
+  publication: string;
 }

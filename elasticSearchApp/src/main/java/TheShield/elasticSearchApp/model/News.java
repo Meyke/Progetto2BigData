@@ -19,6 +19,8 @@ public class News {
 
     private float score;
 
+    private String publication;
+
     public long getId() {
         return id;
     }
@@ -67,6 +69,14 @@ public class News {
         this.score = score;
     }
 
+    public String getPublication() {
+        return publication;
+    }
+
+    public void setPublication(String publication) {
+        this.publication = publication;
+    }
+
     @Override
     public String toString() {
         return "News{" +
@@ -75,6 +85,7 @@ public class News {
                 ", date='" + date + '\'' +
                 ", url='" + url + '\'' +
                 ", content='" + content + '\'' +
+                ", publication='" + publication + '\'' +
                 '}';
     }
 }
