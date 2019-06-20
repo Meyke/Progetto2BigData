@@ -1,0 +1,13 @@
+## Per creare l'immagine docker digitare.
+
+docker build -t angular-image .
+
+## Per avviare l'app tramite docker, digitare:
+
+docker run -it -p 4200:4200 --name=angular angular-image
+
+## Per stoppare il contenitore:
+docker stop angular
+
+## Per eliminare il contenitore:
+docker rm angular

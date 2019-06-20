@@ -112,7 +112,7 @@ public class NewsRepositoryImpl implements NewsRepository{
                 .prepareSearch("news_idx")
                 .setTypes("news")
                 .setQuery(QueryBuilders.multiMatchQuery(title, "title", "content"))
-                .setFrom(0).setSize(60).setExplain(true);
+                .setFrom(0).setSize(10).setExplain(true);
 
 
         SearchResponse response  = builder.execute().actionGet();

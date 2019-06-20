@@ -1,0 +1,40 @@
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">News fair search engine</h1>
+      <form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="query" [(ngModel)]="query" name="query" 
+    placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="go()" >Submit</button>
+</form>
+    </div>
+  </section>
+
+
+  <h2>Results</h2>
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">content</th>
+        <th scope="col">score</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let news of data">
+      <tr>
+        <td>{{news.id}}</td>
+        <td>{{news.title}}</td>
+        <td>{{news.content}}</td>
+        <td>{{news.score}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+</main>
+
